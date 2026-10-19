@@ -1,0 +1,162 @@
+% !TeX program = pdflatex
+% UTF-8. pdfLaTeX hai lan. Hinh TikZ tu chua.
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage{lmodern}
+\usepackage[left=19mm,right=19mm,top=20mm,bottom=21mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,booktabs,array,tabularx,longtable,ragged2e}
+\usepackage[table]{xcolor}
+\usepackage{tikz,listings,enumitem,fancyhdr,lastpage,needspace}
+\usetikzlibrary{arrows.meta,positioning,calc}
+\usepackage[most]{tcolorbox}
+\usepackage[unicode,hidelinks]{hyperref}
+\usepackage{bookmark}
+\definecolor{Ink}{HTML}{18384F}
+\definecolor{Teal}{HTML}{087E8B}
+\definecolor{Paper}{HTML}{F1F6F8}
+\definecolor{Muted}{HTML}{526477}
+\renewcommand{\tabularxcolumn}[1]{>{\RaggedRight\arraybackslash}p{#1}}
+\setlength{\parindent}{0pt}\setlength{\parskip}{5pt}
+\setlength{\emergencystretch}{3em}\linespread{1.01}
+\setlist[enumerate]{leftmargin=6mm,itemsep=4pt,topsep=3pt}
+\setlist[itemize]{leftmargin=5mm,itemsep=3pt,topsep=3pt}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\fontsize{8}{9.5}\selectfont\sffamily\color{Ink}BIỂU DIỄN TRI THỨC VÀ TÌM KIẾM NÂNG CAO}
+\fancyhead[R]{\fontsize{8}{9.5}\selectfont\sffamily\VersionShort}
+\fancyfoot[L]{\fontsize{8.2}{10}\selectfont\color{Muted}Nguyễn Bích Vân\textbar{}Biểu diễn tri thức và tìm kiếm nâng cao}
+\fancyfoot[R]{\footnotesize\thepage/\pageref*{LastPage}}
+\newtcolorbox{notice}[1][]{enhanced,breakable,colback=Paper,colframe=Teal!50,boxrule=.5pt,arc=1mm,left=3mm,right=3mm,top=2mm,bottom=2mm,#1}
+\newcommand{\head}[1]{\par\Needspace{3\baselineskip}\medskip{\large\sffamily\bfseries\color{Ink}#1}\par}
+\newcommand{\pagehead}[1]{\clearpage\begin{tcolorbox}[colback=Ink,colframe=Ink,coltext=white,fontupper=\sffamily\large\bfseries,arc=1mm]#1\end{tcolorbox}}
+\lstdefinestyle{py}{language=Python,basicstyle=\ttfamily\fontsize{8.5}{10}\selectfont,keywordstyle=\bfseries\color{Teal},commentstyle=\color{Muted}\itshape,showstringspaces=false,keepspaces=true,columns=fullflexible,breaklines=true,frame=single,rulecolor=\color{Teal!35},backgroundcolor=\color{Paper},framesep=4pt,aboveskip=6pt,belowskip=6pt,upquote=true,tabsize=4}
+\lstset{style=py}
+\hypersetup{pdfauthor={Nguyễn Bích Vân},pdflang={vi-VN},pdfsubject={Biểu diễn tri thức và tìm kiếm nâng cao}}
+\newcommand{\VersionShort}{MẪU BÁO CÁO}\begin{document}\small
+{\Large\sffamily\bfseries\color{Ink}01. THÔNG TIN NHÓM VÀ MÔ HÌNH}\par\medskip
+BÁO CÁO GIỮA KỲ -- NHÓM 15 (5 SINH VIÊN): ĂN HẾT THỨC ĂN RỒI TỚI G\par\medskip
+Học phần: Biểu diễn tri thức và tìm kiếm nâng cao\par Giảng viên: TS. Nguyễn Bích Vân -- IAI--UET--VNU\par\medskip
+Lớp / ngày giao / ngày nộp: [Điền]\par Python / hệ điều hành / lệnh chạy: [Điền]\par\medskip
+Chọn Word hoặc LaTeX, thay [Điền] bằng nội dung thật. Mẫu trống 6 trang; báo cáo hoàn thiện 6--8 trang chính. PDF tính tay nộp riêng.\par\medskip
+\begingroup\footnotesize\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\linewidth}{XXXX}\toprule
+\textbf{Thành viên / MSSV} & \textbf{Chủ trì} & \textbf{Hai test phụ trách} & \textbf{Kiểm tra chéo}\\\midrule
+1. [Điền] & [Điền] & [Điền] & [Điền]\\
+2. [Điền] & [Điền] & [Điền] & [Điền]\\
+3. [Điền] & [Điền] & [Điền] & [Điền]\\
+4. [Điền] & [Điền] & [Điền] & [Điền]\\
+5. [Điền] & [Điền] & [Điền] & [Điền]\\
+\bottomrule\end{tabularx}\endgroup\par\medskip
+\head{1. Mô hình bài toán}
+Ý nghĩa P, F, G, tường và ô trống: [Điền].\par Trạng thái, hành động, chuyển trạng thái, chi phí: [Điền 4--6 câu].\par Điều kiện hoàn tất: [Điền].\par\medskip
+Vì sao vị trí đơn lẻ chưa đủ? Ví dụ cùng tọa độ khác tập thức ăn: [Điền].\par Cận số trạng thái theo V và m; điều cận này chưa nói: [Điền].\par\medskip
+\head{2. Mặt nạ và phần việc tự làm}
+Thứ tự đánh số F / ý nghĩa bit 1 / cách xóa bit: [Điền].\par Các tệp dùng nguyên: [Điền].\par Dữ liệu, test hoặc phần mã tự sửa: [Điền].\par\medskip
+\pagehead{02. THUẬT TOÁN VÀ HEURISTIC}
+\head{3. Trình bày lại hai thuật toán}
+\begingroup\footnotesize\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\linewidth}{XXX}\toprule
+\textbf{Công việc} & \textbf{UCS: mã giả / giải thích} & \textbf{A*: mã giả / giải thích}\\\midrule
+Khởi tạo biên / khóa & [Điền] & [Điền]\\
+Lấy phần tử kế tiếp & [Điền] & [Điền]\\
+Loại bản ghi cũ & [Điền] & [Điền]\\
+Kiểm đích và ngân sách & [Điền] & [Điền]\\
+Sinh con / cập nhật mask & [Điền] & [Điền]\\
+Cập nhật g và cha & [Điền] & [Điền]\\
+Dựng đường / kết thúc & [Điền] & [Điền]\\
+\bottomrule\end{tabularx}\endgroup\par\medskip
+Tên tệp, hàm và đoạn mã tương ứng: [Điền].\par Quy tắc đồng hạng và khi nào đổi cha: [Điền].\par\medskip
+\head{4. Hai heuristic}
+Định nghĩa h\_F, h\_V bằng công thức và lời: [Điền].\par Trường hợp không còn F nhưng chưa tới G: [Điền].\par\medskip
+Chứng minh chấp nhận được: [Điền].\par Nhất quán khi không ăn F: [Điền].\par Nhất quán khi ăn F, kể cả viên cuối: [Điền].\par\medskip
+Quan hệ h\_V và h\_F; giới hạn kết luận về thời gian: [Điền].\par\medskip
+\head{5. Độ phức tạp}
+Phân biệt ô vật lý và state; V, V', E': [Điền].\par Thời gian, bộ nhớ, chi phí trace: [Điền].\par Các giả thiết dùng để bảo đảm tối ưu: [Điền].\par\medskip
+\pagehead{03. TÍNH TAY VÀ ĐỐI CHIẾU MÃ}
+Tệp TinhTay.pdf / trang B1--B4: [Điền].\par Thời điểm ghi dự đoán trước khi chạy: [Điền].\par\medskip
+\head{6. M0}
+P/G/F, số ô đi được và cận trạng thái: [Điền].\par h\_F, h\_V ở đầu và hai con: [Điền].\par Đường, bước ăn từng F, chi phí và cận chứng minh tối ưu: [Điền].\par\medskip
+\head{7. Sáu lần lấy đầu trên H}
+\begingroup\footnotesize\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\linewidth}{XXXX}\toprule
+\textbf{Lần} & \textbf{UCS: state / g} & \textbf{A\_V: state / g,h,f} & \textbf{Khớp tay--mã?}\\\midrule
+1 & [Điền] & [Điền] & [Điền]\\
+2 & [Điền] & [Điền] & [Điền]\\
+3 & [Điền] & [Điền] & [Điền]\\
+4 & [Điền] & [Điền] & [Điền]\\
+5 & [Điền] & [Điền] & [Điền]\\
+6 & [Điền] & [Điền] & [Điền]\\
+\bottomrule\end{tabularx}\endgroup\par\medskip
+OPEN đầy đủ, con mới và cha: TinhTay.pdf trang [Điền].\par Lần đầu hai thuật toán lấy khác và nguyên nhân: [Điền].\par Đường hoàn chỉnh / chi phí / cận đạt được: [Điền].\par\medskip
+\head{8. Các phản ví dụ}
+Ô cần quay lại, test phát hiện gộp vị trí: [Điền].\par Qua G sớm / hết F chưa tới G: [Điền].\par Hàm cộng sai trên PFFG; dùng F ban đầu tại đích: [Điền].\par no\_path so với limit, ngân sách 0: [Điền].\par\medskip
+Một dự đoán cần sửa hoặc điều hiểu rõ hơn sau đối chiếu: [Điền].\par\medskip
+\pagehead{04. THỰC NGHIỆM CHUNG VÀ RIÊNG}
+Lệnh thật / ngân sách / tệp JSON và CSV: [Điền].\par N là số mở rộng, không phải số byte RAM. Chưa có lời giải: không ghi chi phí 0.\par\medskip
+\head{9. Tóm tắt 24 cấu hình chung}
+\begingroup\footnotesize\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\linewidth}{XXXXX}\toprule
+\textbf{Bản đồ / thứ tự} & \textbf{Status / cost} & \textbf{N UCS} & \textbf{N A\_F} & \textbf{N A\_V}\\\midrule
+M0/RDLU & [Điền] & [Điền] & [Điền] & [Điền]\\
+M0/DRUL & [Điền] & [Điền] & [Điền] & [Điền]\\
+M1/RDLU & [Điền] & [Điền] & [Điền] & [Điền]\\
+M1/DRUL & [Điền] & [Điền] & [Điền] & [Điền]\\
+M2/RDLU & [Điền] & [Điền] & [Điền] & [Điền]\\
+M2/DRUL & [Điền] & [Điền] & [Điền] & [Điền]\\
+M3/RDLU & [Điền] & [Điền] & [Điền] & [Điền]\\
+M3/DRUL & [Điền] & [Điền] & [Điền] & [Điền]\\
+\bottomrule\end{tabularx}\endgroup\par\medskip
+Tỷ lệ giảm mở rộng; xử lý mẫu số 0: [Điền].\par Đỉnh biên / cùng chi phí nhưng khác đường: [Điền, dẫn CSV].\par\medskip
+\head{10. N1/N2: 12 cấu hình riêng}
+\begingroup\footnotesize\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\linewidth}{XXXXX}\toprule
+\textbf{Bản đồ / thứ tự} & \textbf{Status / cost} & \textbf{N UCS} & \textbf{N A\_F} & \textbf{N A\_V}\\\midrule
+N1/RDLU & [Điền] & [Điền] & [Điền] & [Điền]\\
+N1/DRUL & [Điền] & [Điền] & [Điền] & [Điền]\\
+N2/RDLU & [Điền] & [Điền] & [Điền] & [Điền]\\
+N2/DRUL & [Điền] & [Điền] & [Điền] & [Điền]\\
+\bottomrule\end{tabularx}\endgroup\par\medskip
+Seed, kích thước, ba F: [Điền].\par N1: đường và ô quay lại: [Điền].\par N2: G tới được nhưng F bị ngăn; miền tách: [Điền].\par Thay F/G trên bản sao: dự đoán / kết quả / giải thích: [Điền].\par\medskip
+\pagehead{05. KIỂM THỬ NHÓM TỰ VIẾT}
+Tệp test\_nhom.py; log output/ket\_qua\_test.txt.\par Lệnh / thời điểm / tổng test / số đạt, lỗi: [Điền].\par Ba test có kỳ vọng tính tay và trang minh chứng: [Điền].\par\medskip
+\begingroup\footnotesize\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\linewidth}{XXXXX}\toprule
+\textbf{STT} & \textbf{Tên test / dữ liệu} & \textbf{Kỳ vọng và cách suy ra} & \textbf{Thực tế} & \textbf{Người}\\\midrule
+1 & [Điền] & [Điền] & [Điền] & [Điền]\\
+2 & [Điền] & [Điền] & [Điền] & [Điền]\\
+3 & [Điền] & [Điền] & [Điền] & [Điền]\\
+4 & [Điền] & [Điền] & [Điền] & [Điền]\\
+5 & [Điền] & [Điền] & [Điền] & [Điền]\\
+6 & [Điền] & [Điền] & [Điền] & [Điền]\\
+7 & [Điền] & [Điền] & [Điền] & [Điền]\\
+8 & [Điền] & [Điền] & [Điền] & [Điền]\\
+9 & [Điền] & [Điền] & [Điền] & [Điền]\\
+10 & [Điền] & [Điền] & [Điền] & [Điền]\\
+\bottomrule\end{tabularx}\endgroup\par\medskip
+\head{11. Phạm vi kiểm thử}
+Ăn F, quay lại, mask không thêm bit: [Điền tên test].\par Qua G sớm, hết F chưa tới G, không có F ban đầu: [Điền].\par\medskip
+no\_path / limit / đầu hoàn tất với ngân sách 0: [Điền].\par Bản đồ sai, chỉ số biên, tường, đường hợp lệ: [Điền].\par\medskip
+Đổi F/G, không sửa đầu vào, trace bật/tắt, h=0: [Điền].\par Kiểm đường và chi phí: [Điền].\par\medskip
+\head{12. Test chưa đạt}
+Lỗi phát hiện, cách sửa, lần chạy lại hoặc chưa khắc phục: [Điền].\par Trường hợp chưa kiểm: [Điền]. Không ghi PASS trước khi chạy; test mẫu không tính vào mười test riêng.\par\medskip
+\pagehead{06. NHẬN XÉT VÀ KIỂM TRA TRƯỚC NỘP}
+\head{13. Ba nhận xét có minh chứng}
+Nhận xét 1 -- Mô hình và số thức ăn (80--120 từ):\par [Điền; dẫn dữ liệu/test].\par\medskip
+Nhận xét 2 -- h\_F, h\_V và UCS (80--120 từ):\par [Điền; số liệu, đồng hạng, chi phí tính h].\par\medskip
+Nhận xét 3 -- Đích, thức ăn và giới hạn tài nguyên (80--120 từ):\par [Điền; minh chứng và giới hạn].\par\medskip
+\head{14. Tái tạo và bảo vệ}
+Hai giới hạn của thí nghiệm: [Điền].\par Điều đã hiểu rõ hơn sau khi làm: [Điền].\par\medskip
+\begingroup\footnotesize\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\linewidth}{XX}\toprule
+\textbf{Kiểm tra trước nộp} & \textbf{Tệp / người / kết quả thật}\\\midrule
+Báo cáo, tính tay, 6--8 slide & [Điền]\\
+Mã Python, dữ liệu và README & [Điền]\\
+24+12 cấu hình và hai trace H & [Điền]\\
+10 test riêng, log thật & [Điền]\\
+Giải nén chạy trên máy khác & [Điền]\\
+Năm người tập bảo vệ 15--20 phút & [Điền]\\
+\bottomrule\end{tabularx}\endgroup\par\medskip
+Tên ZIP / người kiểm gói sạch / ngày: [Điền].\par Năm thành viên xác nhận công việc và kết quả: [Điền].\par\medskip
+Có thể thêm dòng, giãn ô. Giữ 6--8 trang nội dung chính, vết dài đưa vào phụ lục. Không xóa phần giải thích để chỉ giữ đáp số.\par\medskip
+\end{document}
