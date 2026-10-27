@@ -1,0 +1,13 @@
+﻿case,algorithm,heuristic,order,status,cost,length,expanded,popped,generated,frontier_peak,stale,reopened,elapsed_ms
+N1,ucs,zero,RDLU,found,20,20,264,265,821,25,0,0,1.4115999802015722
+N1,ucs,zero,DRUL,found,20,20,273,274,847,25,0,0,1.092300022719428
+N1,astar,food,RDLU,found,20,20,203,204,637,38,2,0,2.217100001871586
+N1,astar,food,DRUL,found,20,20,205,206,643,39,2,0,1.4439999940805137
+N1,astar,via,RDLU,found,20,20,80,81,247,16,0,0,0.47480000648647547
+N1,astar,via,DRUL,found,20,20,80,81,247,16,0,0,0.5251999828033149
+N2,ucs,zero,RDLU,no_path,,,72,72,216,11,0,0,0.3961999900639057
+N2,ucs,zero,DRUL,no_path,,,72,72,216,10,0,0,0.48550000065006316
+N2,astar,food,RDLU,no_path,,,72,72,216,12,2,0,0.44010000419802964
+N2,astar,food,DRUL,no_path,,,72,72,216,12,2,0,0.451300002168864
+N2,astar,via,RDLU,no_path,,,72,72,216,12,2,0,0.4628000024240464
+N2,astar,via,DRUL,no_path,,,72,72,216,12,2,0,0.509400008013472

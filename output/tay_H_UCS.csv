@@ -1,0 +1,2 @@
+﻿case,algorithm,heuristic,order,status,cost,length,expanded,popped,generated,frontier_peak,stale,reopened,elapsed_ms
+H,ucs,zero,RDLU,found,7,7,15,16,27,3,0,0,0.32560000545345247

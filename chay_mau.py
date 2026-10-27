@@ -3,7 +3,7 @@ from maze import parse_maze,draw_path
 from search import solve
 ROWS=['%%%%%%%','%P.F.G%','%%%%%%%']
 ALGORITHM='astar'
-HEURISTIC='food'  # food / via / zero
+HEURISTIC='via'  # food / via / zero
 ORDER='RDLU'
 if __name__=='__main__':
     m=parse_maze(ROWS);r=solve(m,ALGORITHM,HEURISTIC,ORDER,trace_limit=6)

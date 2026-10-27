@@ -1,0 +1,784 @@
+[
+  {
+    "status": "found",
+    "algorithm": "ucs",
+    "heuristic": "zero",
+    "order": "RDLU",
+    "start": [
+      1,
+      3,
+      3
+    ],
+    "goal": [
+      1,
+      6
+    ],
+    "foods": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        4
+      ]
+    ],
+    "rows": [
+      "%%%%%%%%",
+      "%F.PF.G%",
+      "%%%%%%%%"
+    ],
+    "cost": 7,
+    "length": 7,
+    "states": [
+      [
+        1,
+        3,
+        3
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        1,
+        1,
+        2
+      ],
+      [
+        1,
+        2,
+        2
+      ],
+      [
+        1,
+        3,
+        2
+      ],
+      [
+        1,
+        4,
+        0
+      ],
+      [
+        1,
+        5,
+        0
+      ],
+      [
+        1,
+        6,
+        0
+      ]
+    ],
+    "actions": [
+      "L",
+      "L",
+      "R",
+      "R",
+      "R",
+      "R",
+      "R"
+    ],
+    "path": [
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        6
+      ]
+    ],
+    "pop_order": [
+      [
+        1,
+        3,
+        3
+      ],
+      [
+        1,
+        4,
+        1
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        1,
+        5,
+        1
+      ],
+      [
+        1,
+        3,
+        1
+      ],
+      [
+        1,
+        1,
+        2
+      ],
+      [
+        1,
+        6,
+        1
+      ],
+      [
+        1,
+        2,
+        1
+      ],
+      [
+        1,
+        2,
+        2
+      ],
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        3,
+        2
+      ],
+      [
+        1,
+        2,
+        0
+      ],
+      [
+        1,
+        4,
+        0
+      ],
+      [
+        1,
+        3,
+        0
+      ],
+      [
+        1,
+        5,
+        0
+      ],
+      [
+        1,
+        6,
+        0
+      ]
+    ],
+    "trace": [
+      {
+        "index": 1,
+        "state": [
+          1,
+          3,
+          3
+        ],
+        "g": 0,
+        "h": 0,
+        "f": 0,
+        "frontier_before": [
+          {
+            "state": [
+              1,
+              3,
+              3
+            ],
+            "g": 0,
+            "h": 0,
+            "f": 0,
+            "ticket": 0,
+            "stale": false
+          }
+        ],
+        "updates": [
+          {
+            "state": [
+              1,
+              4,
+              1
+            ],
+            "action": "R",
+            "g": 1,
+            "old_g": null
+          },
+          {
+            "state": [
+              1,
+              2,
+              3
+            ],
+            "action": "L",
+            "g": 1,
+            "old_g": null
+          }
+        ],
+        "frontier_after": [
+          {
+            "state": [
+              1,
+              4,
+              1
+            ],
+            "g": 1,
+            "h": 0,
+            "f": 1,
+            "ticket": 1,
+            "stale": false
+          },
+          {
+            "state": [
+              1,
+              2,
+              3
+            ],
+            "g": 1,
+            "h": 0,
+            "f": 1,
+            "ticket": 2,
+            "stale": false
+          }
+        ],
+        "outcome": "expanded"
+      },
+      {
+        "index": 2,
+        "state": [
+          1,
+          4,
+          1
+        ],
+        "g": 1,
+        "h": 0,
+        "f": 1,
+        "frontier_before": [
+          {
+            "state": [
+              1,
+              4,
+              1
+            ],
+            "g": 1,
+            "h": 0,
+            "f": 1,
+            "ticket": 1,
+            "stale": false
+          },
+          {
+            "state": [
+              1,
+              2,
+              3
+            ],
+            "g": 1,
+            "h": 0,
+            "f": 1,
+            "ticket": 2,
+            "stale": false
+          }
+        ],
+        "updates": [
+          {
+            "state": [
+              1,
+              5,
+              1
+            ],
+            "action": "R",
+            "g": 2,
+            "old_g": null
+          },
+          {
+            "state": [
+              1,
+              3,
+              1
+            ],
+            "action": "L",
+            "g": 2,
+            "old_g": null
+          }
+        ],
+        "frontier_after": [
+          {
+            "state": [
+              1,
+              2,
+              3
+            ],
+            "g": 1,
+            "h": 0,
+            "f": 1,
+            "ticket": 2,
+            "stale": false
+          },
+          {
+            "state": [
+              1,
+              5,
+              1
+            ],
+            "g": 2,
+            "h": 0,
+            "f": 2,
+            "ticket": 3,
+            "stale": false
+          },
+          {
+            "state": [
+              1,
+              3,
+              1
+            ],
+            "g": 2,
+            "h": 0,
+            "f": 2,
+            "ticket": 4,
+            "stale": false
+          }
+        ],
+        "outcome": "expanded"
+      },
+      {
+        "index": 3,
+        "state": [
+          1,
+          2,
+          3
+        ],
+        "g": 1,
+        "h": 0,
+        "f": 1,
+        "frontier_before": [
+          {
+            "state": [
+              1,
+              2,
+              3
+            ],
+            "g": 1,
+            "h": 0,
+            "f": 1,
+            "ticket": 2,
+            "stale": false
+          },
+          {
+            "state": [
+              1,
+              5,
+              1
+            ],
+            "g": 2,
+            "h": 0,
+            "f": 2,
+            "ticket": 3,
+            "stale": false
+          },
+          {
+            "state": [
+              1,
+              3,
+              1
+            ],
+            "g": 2,
+            "h": 0,
+            "f": 2,
+            "ticket": 4,
+            "stale": false
+          }
+        ],
+        "updates": [
+          {
+            "state": [
+              1,
+              1,
+              2
+            ],
+            "action": "L",
+            "g": 2,
+            "old_g": null
+          }
+        ],
+        "frontier_after": [
+          {
+            "state": [
+              1,
+              5,
+              1
+            ],
+            "g": 2,
+            "h": 0,
+            "f": 2,
+            "ticket": 3,
+            "stale": false
+          },
+          {
+            "state": [
+              1,
+              3,
+              1
+            ],
+            "g": 2,
+            "h": 0,
+            "f": 2,
+            "ticket": 4,
+            "stale": false
+          },
+          {
+            "state": [
+              1,
+              1,
+              2
+            ],
+            "g": 2,
+            "h": 0,
+            "f": 2,
+            "ticket": 5,
+            "stale": false
+          }
+        ],
+        "outcome": "expanded"
+      },
+      {
+        "index": 4,
+        "state": [
+          1,
+          5,
+          1
+        ],
+        "g": 2,
+        "h": 0,
+        "f": 2,
+        "frontier_before": [
+          {
+            "state": [
+              1,
+              5,
+              1
+            ],
+            "g": 2,
+            "h": 0,
+            "f": 2,
+            "ticket": 3,
+            "stale": false
+          },
+          {
+            "state": [
+              1,
+              3,
+              1
+            ],
+            "g": 2,
+            "h": 0,
+            "f": 2,
+            "ticket": 4,
+            "stale": false
+          },
+          {
+            "state": [
+              1,
+              1,
+              2
+            ],
+            "g": 2,
+            "h": 0,
+            "f": 2,
+            "ticket": 5,
+            "stale": false
+          }
+        ],
+        "updates": [
+          {
+            "state": [
+              1,
+              6,
+              1
+            ],
+            "action": "R",
+            "g": 3,
+            "old_g": null
+          }
+        ],
+        "frontier_after": [
+          {
+            "state": [
+              1,
+              3,
+              1
+            ],
+            "g": 2,
+            "h": 0,
+            "f": 2,
+            "ticket": 4,
+            "stale": false
+          },
+          {
+            "state": [
+              1,
+              1,
+              2
+            ],
+            "g": 2,
+            "h": 0,
+            "f": 2,
+            "ticket": 5,
+            "stale": false
+          },
+          {
+            "state": [
+              1,
+              6,
+              1
+            ],
+            "g": 3,
+            "h": 0,
+            "f": 3,
+            "ticket": 6,
+            "stale": false
+          }
+        ],
+        "outcome": "expanded"
+      },
+      {
+        "index": 5,
+        "state": [
+          1,
+          3,
+          1
+        ],
+        "g": 2,
+        "h": 0,
+        "f": 2,
+        "frontier_before": [
+          {
+            "state": [
+              1,
+              3,
+              1
+            ],
+            "g": 2,
+            "h": 0,
+            "f": 2,
+            "ticket": 4,
+            "stale": false
+          },
+          {
+            "state": [
+              1,
+              1,
+              2
+            ],
+            "g": 2,
+            "h": 0,
+            "f": 2,
+            "ticket": 5,
+            "stale": false
+          },
+          {
+            "state": [
+              1,
+              6,
+              1
+            ],
+            "g": 3,
+            "h": 0,
+            "f": 3,
+            "ticket": 6,
+            "stale": false
+          }
+        ],
+        "updates": [
+          {
+            "state": [
+              1,
+              2,
+              1
+            ],
+            "action": "L",
+            "g": 3,
+            "old_g": null
+          }
+        ],
+        "frontier_after": [
+          {
+            "state": [
+              1,
+              1,
+              2
+            ],
+            "g": 2,
+            "h": 0,
+            "f": 2,
+            "ticket": 5,
+            "stale": false
+          },
+          {
+            "state": [
+              1,
+              6,
+              1
+            ],
+            "g": 3,
+            "h": 0,
+            "f": 3,
+            "ticket": 6,
+            "stale": false
+          },
+          {
+            "state": [
+              1,
+              2,
+              1
+            ],
+            "g": 3,
+            "h": 0,
+            "f": 3,
+            "ticket": 7,
+            "stale": false
+          }
+        ],
+        "outcome": "expanded"
+      },
+      {
+        "index": 6,
+        "state": [
+          1,
+          1,
+          2
+        ],
+        "g": 2,
+        "h": 0,
+        "f": 2,
+        "frontier_before": [
+          {
+            "state": [
+              1,
+              1,
+              2
+            ],
+            "g": 2,
+            "h": 0,
+            "f": 2,
+            "ticket": 5,
+            "stale": false
+          },
+          {
+            "state": [
+              1,
+              6,
+              1
+            ],
+            "g": 3,
+            "h": 0,
+            "f": 3,
+            "ticket": 6,
+            "stale": false
+          },
+          {
+            "state": [
+              1,
+              2,
+              1
+            ],
+            "g": 3,
+            "h": 0,
+            "f": 3,
+            "ticket": 7,
+            "stale": false
+          }
+        ],
+        "updates": [
+          {
+            "state": [
+              1,
+              2,
+              2
+            ],
+            "action": "R",
+            "g": 3,
+            "old_g": null
+          }
+        ],
+        "frontier_after": [
+          {
+            "state": [
+              1,
+              6,
+              1
+            ],
+            "g": 3,
+            "h": 0,
+            "f": 3,
+            "ticket": 6,
+            "stale": false
+          },
+          {
+            "state": [
+              1,
+              2,
+              1
+            ],
+            "g": 3,
+            "h": 0,
+            "f": 3,
+            "ticket": 7,
+            "stale": false
+          },
+          {
+            "state": [
+              1,
+              2,
+              2
+            ],
+            "g": 3,
+            "h": 0,
+            "f": 3,
+            "ticket": 8,
+            "stale": false
+          }
+        ],
+        "outcome": "expanded"
+      }
+    ],
+    "popped": 16,
+    "expanded": 15,
+    "generated": 27,
+    "pushed": 16,
+    "stale": 0,
+    "reopened": 0,
+    "frontier_peak": 3,
+    "elapsed_ms": 0.32560000545345247,
+    "case": "H"
+  }
+]

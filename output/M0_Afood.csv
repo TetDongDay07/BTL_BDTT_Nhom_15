@@ -1,0 +1,2 @@
+﻿case,algorithm,heuristic,order,status,cost,length,expanded,popped,generated,frontier_peak,stale,reopened,elapsed_ms
+M0,astar,food,RDLU,found,10,10,27,28,75,8,0,0,12877.981744008139
