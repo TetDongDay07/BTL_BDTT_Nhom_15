@@ -14,7 +14,7 @@ ROOT = Path(__file__).resolve().parent
 
 class TestNhom15(unittest.TestCase):
     # =========================================================================
-    # THÀNH VIÊN 1: Nguyễn Quốc Hiếu (2 kiểm thử)
+    # THÀNH VIÊN 1: Phan Ngọc Huy (2 kiểm thử)
     # =========================================================================
     def test_01_an_va_quay_lai(self):
         """[TV1 - Tính tay TinhTay.pdf tr.B4] Ăn F ở ngõ cụt trái rồi quay lại qua P tới G."""
@@ -93,7 +93,7 @@ class TestNhom15(unittest.TestCase):
         self.assertEqual(r['states'][-1], [1, 5, 0])
 
     # =========================================================================
-    # THÀNH VIÊN 3: Dương Nhật Huy (2 kiểm thử)
+    # THÀNH VIÊN 3: Hoàng Trung Kiên (2 kiểm thử)
     # =========================================================================
     def test_05_khong_co_food_ban_dau(self):
         """[TV3 - Tính tay TinhTay.pdf tr.B4] Bản đồ không có F ban đầu (m=0, mask=0)."""
@@ -129,7 +129,7 @@ class TestNhom15(unittest.TestCase):
         self.assertEqual(r_limit['expanded'], 5)
 
     # =========================================================================
-    # THÀNH VIÊN 4: Phan Ngọc Huy (2 kiểm thử)
+    # THÀNH VIÊN 4: Nguyễn Quốc Hiếu (2 kiểm thử)
     # =========================================================================
     def test_07_dau_hoan_tat_ngan_sach_0(self):
         """[TV4] Trạng thái đầu đã hoàn tất (tại G, mask=0) với ngân sách max_expanded=0 vẫn thành công."""
@@ -161,7 +161,7 @@ class TestNhom15(unittest.TestCase):
         self.assertEqual(list(successors(m_diag, m_diag.initial())), [])
 
     # =========================================================================
-    # THÀNH VIÊN 5: Hoàng Trung Kiên (2 kiểm thử)
+    # THÀNH VIÊN 5: Dương Nhật Huy (2 kiểm thử)
     # =========================================================================
     def test_09_khong_sua_input_va_trace(self):
         """[TV5] Bảo toàn dữ liệu đầu vào, bật/tắt trace không đổi kết quả, A*(h=0) khớp UCS, đổi F/G."""
