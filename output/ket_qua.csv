@@ -1,2 +1,2 @@
 ﻿case,algorithm,heuristic,order,status,cost,length,expanded,popped,generated,frontier_peak,stale,reopened,elapsed_ms
-H,astar,via,RDLU,found,7,7,7,8,13,3,0,0,0.0801000278443098
+H,astar,food,RDLU,found,7,7,14,15,26,3,0,0,68911.38290596427
