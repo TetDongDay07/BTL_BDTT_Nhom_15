@@ -1,5 +1,5 @@
 # README bài nộp — Nhóm 15 (5 sinh viên)
-Đổi tên thành README_NOP.md; điền mọi chỗ [Điền].
+
 Lớp, năm thành viên/MSSV: [Điền]. Python/OS đã thử: [Điền].
 Tệp dùng nguyên / tệp tự sửa: [Điền]. Seed và mô tả dữ liệu riêng: [Điền].
 

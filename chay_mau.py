@@ -1,6 +1,20 @@
 """Chỉ sửa các biến dữ liệu, rồi chạy tệp này trong VS Code."""
 from maze import parse_maze,draw_path
 from search import solve
+
+''' 
+Bản sao N2 đã dời viên F từ (3,6) sang (2,3) (Sửa ROWS Thành như này khi chạy DEMOkhi Demo)
+ROWS = [
+    "%%%%%%%%%%%",
+    "%F%G.%....%",
+    "%..F.%....%",
+    "%...P%....%",
+    "%...F%....%",
+    "%....%....%",
+    "%%%%%%%%%%%"
+]
+'''
+
 ROWS=['%%%%%%%','%P.F.G%','%%%%%%%']
 ALGORITHM='astar'
 HEURISTIC='via'  # food / via / zero

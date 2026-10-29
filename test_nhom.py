@@ -59,7 +59,7 @@ class TestNhom15(unittest.TestCase):
     # THÀNH VIÊN 2: Lê Đức Huy (2 kiểm thử)
     # =========================================================================
     def test_03_qua_goal_som(self):
-        """[TV2 - Tính tay TinhTay.pdf tr.B4] Đi qua G khi còn F chưa được dừng, ăn F xong mới lùi về G."""
+        """[Tính tay TinhTay.pdf tr.B4] Đi qua G khi còn F chưa được dừng, ăn F xong mới lùi về G."""
         rows = [
             '%%%%%%%%',
             '%P.G..F%',
@@ -77,7 +77,7 @@ class TestNhom15(unittest.TestCase):
         self.assertEqual(r['path'].count([1, 3]), 2)
 
     def test_04_het_food_chua_toi_goal(self):
-        """[TV2] Đã ăn hết F (mask=0) nhưng chưa đứng tại G: is_goal=False, h_F=0, h_V=d(p,G)>0."""
+        """Đã ăn hết F (mask=0) nhưng chưa đứng tại G: is_goal=False, h_F=0, h_V=d(p,G)>0."""
         rows = [
             '%%%%%%%',
             '%P.F.G%',
@@ -96,7 +96,7 @@ class TestNhom15(unittest.TestCase):
     # THÀNH VIÊN 3: Hoàng Trung Kiên (2 kiểm thử)
     # =========================================================================
     def test_05_khong_co_food_ban_dau(self):
-        """[TV3 - Tính tay TinhTay.pdf tr.B4] Bản đồ không có F ban đầu (m=0, mask=0)."""
+        """[Tính tay TinhTay.pdf tr.B4] Bản đồ không có F ban đầu (m=0, mask=0)."""
         rows = [
             '%%%%%%%',
             '%P...G%',
@@ -113,7 +113,7 @@ class TestNhom15(unittest.TestCase):
         self.assertEqual(r['actions'], ['R', 'R', 'R', 'R'])
 
     def test_06_no_path_va_limit(self):
-        """[TV3] Phân biệt rõ trạng thái vô nghiệm (no_path) và hết ngân sách mở rộng (limit)."""
+        """Phân biệt rõ trạng thái vô nghiệm (no_path) và hết ngân sách mở rộng (limit)."""
         # G tới được từ P nhưng F bị tường ngăn kín -> no_path, cost=None (không trả cost=0)
         m_blocked = parse_maze(['%P.G%F%'])
         r_no_path = solve(m_blocked, algorithm='astar', h='via')
@@ -132,7 +132,7 @@ class TestNhom15(unittest.TestCase):
     # THÀNH VIÊN 4: Nguyễn Quốc Hiếu (2 kiểm thử)
     # =========================================================================
     def test_07_dau_hoan_tat_ngan_sach_0(self):
-        """[TV4] Trạng thái đầu đã hoàn tất (tại G, mask=0) với ngân sách max_expanded=0 vẫn thành công."""
+        """Trạng thái đầu đã hoàn tất (tại G, mask=0) với ngân sách max_expanded=0 vẫn thành công."""
         m = parse_maze(['PFG'])
         goal_state = (0, 2, 0)
         r = solve(m, algorithm='astar', h='via', start_state=goal_state, max_expanded=0)
@@ -143,7 +143,7 @@ class TestNhom15(unittest.TestCase):
         self.assertEqual(r['expanded'], 0)
 
     def test_08_ban_do_sai_va_bien(self):
-        """[TV4] Kiểm tra bắt lỗi dữ liệu bản đồ sai và luật di chuyển biên/tường/không đi chéo."""
+        """Kiểm tra bắt lỗi dữ liệu bản đồ sai và luật di chuyển biên/tường/không đi chéo."""
         # Hàng không đều, ký tự lạ, thiếu P/G, quá 8 viên F
         with self.assertRaises(ValueError):
             parse_maze(['P..', 'FG'])
@@ -164,7 +164,7 @@ class TestNhom15(unittest.TestCase):
     # THÀNH VIÊN 5: Dương Nhật Huy (2 kiểm thử)
     # =========================================================================
     def test_09_khong_sua_input_va_trace(self):
-        """[TV5] Bảo toàn dữ liệu đầu vào, bật/tắt trace không đổi kết quả, A*(h=0) khớp UCS, đổi F/G."""
+        """Bảo toàn dữ liệu đầu vào, bật/tắt trace không đổi kết quả, A*(h=0) khớp UCS, đổi F/G."""
         rows = list(CASES['H'])
         saved = deepcopy(rows)
         m = parse_maze(rows)
@@ -188,7 +188,7 @@ class TestNhom15(unittest.TestCase):
             self.assertEqual(heuristic(m_swapped, (1, 1, 0), h_name), 0)
 
     def test_10_kiem_duong_va_chi_phi(self):
-        """[TV5] Kiểm chứng độc lập tính hợp lệ của lộ trình và sự đồng thuận chi phí trên M0, M1, H, N1."""
+        """Kiểm chứng độc lập tính hợp lệ của lộ trình và sự đồng thuận chi phí trên M0, M1, H, N1."""
         cases_to_check = {
             'M0': (CASES['M0'], 10),
             'M1': (CASES['M1'], 13),
