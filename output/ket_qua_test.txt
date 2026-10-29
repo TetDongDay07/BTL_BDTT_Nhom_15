@@ -1,0 +1,26 @@
+COMMAND: python -m unittest -v test_nhom
+test_01_an_va_quay_lai (test_nhom.TestNhom15.test_01_an_va_quay_lai)
+[TV1 - Tính tay TinhTay.pdf tr.B4] Ăn F ở ngõ cụt trái rồi quay lại qua P tới G. ... ok
+test_02_mask_khong_them_bit (test_nhom.TestNhom15.test_02_mask_khong_them_bit)
+[TV1] Kiểm tra mask chỉ xóa bit khi ăn F, tuyệt đối không bật lại bit khi đi qua lần 2. ... ok
+test_03_qua_goal_som (test_nhom.TestNhom15.test_03_qua_goal_som)
+[TV2 - Tính tay TinhTay.pdf tr.B4] Đi qua G khi còn F chưa được dừng, ăn F xong mới lùi về G. ... ok
+test_04_het_food_chua_toi_goal (test_nhom.TestNhom15.test_04_het_food_chua_toi_goal)
+[TV2] Đã ăn hết F (mask=0) nhưng chưa đứng tại G: is_goal=False, h_F=0, h_V=d(p,G)>0. ... ok
+test_05_khong_co_food_ban_dau (test_nhom.TestNhom15.test_05_khong_co_food_ban_dau)
+[TV3 - Tính tay TinhTay.pdf tr.B4] Bản đồ không có F ban đầu (m=0, mask=0). ... ok
+test_06_no_path_va_limit (test_nhom.TestNhom15.test_06_no_path_va_limit)
+[TV3] Phân biệt rõ trạng thái vô nghiệm (no_path) và hết ngân sách mở rộng (limit). ... ok
+test_07_dau_hoan_tat_ngan_sach_0 (test_nhom.TestNhom15.test_07_dau_hoan_tat_ngan_sach_0)
+[TV4] Trạng thái đầu đã hoàn tất (tại G, mask=0) với ngân sách max_expanded=0 vẫn thành công. ... ok
+test_08_ban_do_sai_va_bien (test_nhom.TestNhom15.test_08_ban_do_sai_va_bien)
+[TV4] Kiểm tra bắt lỗi dữ liệu bản đồ sai và luật di chuyển biên/tường/không đi chéo. ... ok
+test_09_khong_sua_input_va_trace (test_nhom.TestNhom15.test_09_khong_sua_input_va_trace)
+[TV5] Bảo toàn dữ liệu đầu vào, bật/tắt trace không đổi kết quả, A*(h=0) khớp UCS, đổi F/G. ... ok
+test_10_kiem_duong_va_chi_phi (test_nhom.TestNhom15.test_10_kiem_duong_va_chi_phi)
+[TV5] Kiểm chứng độc lập tính hợp lệ của lộ trình và sự đồng thuận chi phí trên M0, M1, H, N1. ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.011s
+
+OK
