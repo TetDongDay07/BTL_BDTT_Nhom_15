@@ -42,7 +42,7 @@ class TestNhom15(unittest.TestCase):
 
     def test_02_mask_khong_them_bit(self):
         """[TV1] Kiểm tra mask chỉ xóa bit khi ăn F, tuyệt đối không bật lại bit khi đi qua lần 2."""
-        m = parse_maze(['PF.G'])  # P=(0,0), F=(0,1), G=(0,3)
+        m = parse_maze(['PF.G']) 
         s0 = m.initial()
         self.assertEqual(s0, (0, 0, 1))
         # Bước 1: sang phải (0,1) ăn F -> mask về 0

@@ -6,3 +6,4 @@ CASES={
  'H':['%%%%%%%%','%F.PF.G%','%%%%%%%%']}
 CONFIGS=[('ucs','zero'),('astar','food'),('astar','via')]
 ORDERS=['RDLU','DRUL']
+                
